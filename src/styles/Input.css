@@ -1,0 +1,293 @@
+@charset "UTF-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+@font-face {
+    font-family: 'Sanhayeop';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_JAMO@1.0/Diphylleia-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+
+:root {
+    --main-card: #5D574C;
+    --orange-light: #C8AE58;
+    --green-light: #95E9D8;
+    --title-text: #95E9D8;
+    --gray-text: #7A7A7A;
+    --lightgray-text: #F2F2F2;
+    --button: #A9F0B1;
+}
+
+
+.Inputpage {
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #140F0F;
+
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+/*------------------Input 배경---------------------*/
+.Input-bg {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    overflow: hidden;
+}
+
+.Input-gr01 {
+    background-color: #9BE5F2;
+
+    width: 98%;
+    aspect-ratio: 1/1;
+
+    border-radius: 170px;
+
+    opacity: 0.5;
+    filter: blur(64px);
+
+    position: absolute;
+    left: -56%;
+    bottom: -4%;
+}
+
+.Input-gr02 {
+    background-color: #A9F0B1;
+
+    width: 98%;
+    aspect-ratio: 1/1;
+
+    border-radius: 50%;
+
+    opacity: 0.5;
+    filter: blur(64px);
+
+    position: absolute;
+    right: -40%;
+    bottom: 16%;
+}
+
+.Input-gr03 {
+    background-color: #A9F0B1;
+
+    width: 92%;
+    aspect-ratio: 1/1;
+
+    border-radius: 170px;
+
+    opacity: 0.5;
+    filter: blur(64px);
+
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*------------------Input 콘텐츠---------------------*/
+.Input-con {
+    width: 92%;
+    height: 96%;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+/*-----Input 콘텐츠 : 배경------*/
+.Input-con-bg {
+    background-color: var(--main-card);
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    overflow: hidden;
+}
+
+.Input-con-gr01 {
+    background-color: var(--orange-light);
+
+    width: 98%;
+    aspect-ratio: 1/1;
+
+    border-radius: 50%;
+
+    opacity: 0.5;
+    filter: blur(64px);
+
+    position: absolute;
+    right: -60%;
+    bottom: 0;
+}
+
+.Input-con-gr02 {
+    background-color: var(--green-light);
+
+    width: 98%;
+    aspect-ratio: 1/0.8;
+
+    border-radius: 50%;
+
+    opacity: 0.5;
+    filter: blur(64px);
+
+    position: absolute;
+    left: -32%;
+    bottom: -8%;
+}
+
+.Input-con-ptns {
+    width: 96%;
+    height: 100%;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.Input-con-ptn {
+    width: 6%;
+    height: 100%;
+
+    background-image: url('../assets/img/pattern.png');
+    background-size: contain;
+    background-repeat: repeat-y;
+}
+
+/*-----Input 콘텐츠 : 콘텐츠------*/
+.Input-con-con {
+
+    width: 80%;
+    height: 100%;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 56px;
+}
+
+.Input-con-logo {
+
+    width: 12%;
+    aspect-ratio: 1/1;
+
+    background-image: url('../assets/img/Logo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    margin-top: 24px;
+}
+
+.Input-con-question {
+
+    width: 80%;
+    height: min-content;
+
+    color: var(--title-text);
+
+    font-family: 'Sanhayeop';
+    font-size: 30px;
+    line-height: 1.4;
+    font-weight: 400;
+
+    text-align: center;
+    word-break: keep-all;
+}
+
+.Input-con-answer {
+    width: 96%;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 16%;
+}
+
+.Input-con-textInput {
+    background-color: transparent;
+    outline: none;
+    border: none;
+
+    width: 100%;
+    height: 60%;
+
+    resize: none;
+
+    color: var(--lightgray-text);
+    font-family: "Pretendard";
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 1.5;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+
+.Input-con-textInput:focus {
+    outline: none;
+}
+
+.Input-con-textInput::placeholder {
+    color: var(--gray-text);
+
+    font-size: 20px;
+    font-family: "Pretendard";
+    font-weight: 200;
+    line-height: 1.5;
+
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+
+.Input-con-btn {
+    background-color: var(--button);
+
+    width: 72%;
+    height: 56px;
+
+    border: none;
+    border-radius: 28px;
+
+    color: #7C5C5C;
+    font-size: 16px;
+    font-family: "Pretendard";
+
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    /* 부드럽게 나타났다/사라지기 */
+}
+
+.Input-con-btn.show {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.Input-con-btn.hide {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+}
