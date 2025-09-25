@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css'
 import { supabase } from "./utils/Database"
 
@@ -11,24 +12,14 @@ import FeedPage from "./pages/Feed"
 function App() {
 
   return (
-    <>
-      
-      <Loading></Loading>
-
-      
-
-      {/*
-      
-      <InputPage></InputPage>
-
-
-      
-      <SendingPage></SendingPage>
-      
-
-      <FeedPage></FeedPage>
-        */}
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Loading/>} />
+        <Route path='/Input' element={<InputPage/>} />
+        <Route path='/Sending' element={<SendingPage/>} />
+        <Route path='/Feeds' element={<FeedPage/>} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

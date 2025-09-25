@@ -13,6 +13,34 @@
     align-items: center;
 }
 
+.sending.fadeIn{
+    animation: Opacity 1.2s ease-out forwards;
+}
+
+@keyframes Opacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.sending.fadeout{
+    animation: fade-out 1.2s ease-out forwards;
+}
+
+/*----------페이드 아웃-----------*/
+@keyframes fade-out {
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
 /*----------로딩 배경-----------*/
 
 .sending-bg {

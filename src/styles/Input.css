@@ -8,6 +8,13 @@
     font-display: swap;
 }
 
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 :root {
     --main-card: #5D574C;
@@ -21,15 +28,40 @@
 
 
 .Inputpage {
+    width: 100%;
+    height: 100%;
 
-    width: 100vw;
-    height: 100vh;
-
-    background-color: #140F0F;
 
     position: relative;
     top: 0;
     left: 0;
+}
+.Inputpage.fadeIn{
+    animation: Opacity 1.2s ease-out forwards;
+}
+
+@keyframes Opacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.Inputpage.fadeOut{
+    animation: fade-out 1s ease-out forwards;
+}
+
+/*----------페이드 아웃-----------*/
+@keyframes fade-out {
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
 }
 
 /*------------------Input 배경---------------------*/
@@ -102,6 +134,30 @@
 
 }
 
+.Input-con.fadeIn {
+    animation: fade-in 1.2s ease-out forwards;
+}
+
+@keyframes fade-in {
+    0% {
+        transform: translateX(-50%) translateY(100%);
+        opacity: 0;
+    }
+
+    60% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    80% {
+        transform: translateX(-50%) translateY(-1%);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
+
 /*-----Input 콘텐츠 : 배경------*/
 .Input-con-bg {
     background-color: var(--main-card);
@@ -117,7 +173,7 @@
 .Input-con-gr01 {
     background-color: var(--orange-light);
 
-    width: 98%;
+    width: 90%;
     aspect-ratio: 1/1;
 
     border-radius: 50%;
@@ -126,14 +182,14 @@
     filter: blur(64px);
 
     position: absolute;
-    right: -60%;
+    right: -56%;
     bottom: 0;
 }
 
 .Input-con-gr02 {
     background-color: var(--green-light);
 
-    width: 98%;
+    width: 90%;
     aspect-ratio: 1/0.8;
 
     border-radius: 50%;
@@ -170,8 +226,7 @@
 
 /*-----Input 콘텐츠 : 콘텐츠------*/
 .Input-con-con {
-
-    width: 80%;
+    width: 76%;
     height: 100%;
 
     position: absolute;
@@ -182,30 +237,29 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 56px;
+    gap: 40px;
 }
 
 .Input-con-logo {
 
-    width: 12%;
+    width: 10%;
     aspect-ratio: 1/1;
 
     background-image: url('../assets/img/Logo.png');
     background-size: cover;
     background-repeat: no-repeat;
 
-    margin-top: 24px;
+    margin-top: 36px;
 }
 
 .Input-con-question {
-
-    width: 80%;
+    width: 100%;
     height: min-content;
 
     color: var(--title-text);
 
     font-family: 'Sanhayeop';
-    font-size: 30px;
+    font-size: 1.8rem;
     line-height: 1.4;
     font-weight: 400;
 
@@ -214,7 +268,7 @@
 }
 
 .Input-con-answer {
-    width: 96%;
+    width: 92%;
     flex: 1;
 
     display: flex;
@@ -229,6 +283,7 @@
     background-color: transparent;
     outline: none;
     border: none;
+    resize: none;
 
     width: 100%;
     height: 60%;
@@ -237,7 +292,7 @@
 
     color: var(--lightgray-text);
     font-family: "Pretendard";
-    font-size: 20px;
+    font-size: 1.24rem;
     font-weight: 200;
     line-height: 1.5;
     word-break: keep-all;
@@ -251,7 +306,7 @@
 .Input-con-textInput::placeholder {
     color: var(--gray-text);
 
-    font-size: 20px;
+    font-size: 1.24rem;
     font-family: "Pretendard";
     font-weight: 200;
     line-height: 1.5;
@@ -270,7 +325,7 @@
     border-radius: 28px;
 
     color: #7C5C5C;
-    font-size: 16px;
+    font-size: 1.1rem;
     font-family: "Pretendard";
 
     opacity: 0;
@@ -278,6 +333,11 @@
     pointer-events: none;
     transition: all 0.3s ease;
     /* 부드럽게 나타났다/사라지기 */
+}
+
+.Input-con-btn:hover,
+.Input-con-btn:active {
+    background-color: #9BE5F2;
 }
 
 .Input-con-btn.show {
